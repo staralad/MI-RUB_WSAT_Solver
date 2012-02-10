@@ -31,6 +31,7 @@ class ModifikatorInstanci
 ##
 #Tato metoda slouzi k vygenerovani retezce s nahodnymi vahami.
 #  
+private
   def generuj_vahy(radek)
     pole_vah=[]
     

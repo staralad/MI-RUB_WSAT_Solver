@@ -38,7 +38,7 @@ class WSATGenetikou
   TYP_KRIZENI = 1 
   ## TREST SMRTI znamena automaticke nastavovani zdatnosti rovne 0 jedincum, kteri aktualne nejsou resenim problemu.          
   POUZIT_TREST_SMRTI = false 
-  ## Pokud nebude TREST SMRTI uplatnovan, tak kolik procent maximalniho ohodnoceni zdatnosti mohou ziskat jedinci, kteri aktualni nejsou resenim problemu.       
+  ## Pokud nebude TREST SMRTI uplatnovan, tak kolik procent (0.3 = 30%) maximalniho ohodnoceni zdatnosti mohou ziskat jedinci, kteri aktualni nejsou resenim problemu.       
   PROSTOR_K_POMERENI_ZDATNOSTI_NERESENI = 0.3  
 
 ##
@@ -54,22 +54,7 @@ class WSATGenetikou
     @nejlepsi_reseni = nil        # nejlepsi ziskane reseni pomoci gen. algoritmu
   end
 
-##
-#Tato metoda slouzi k nacteni instancnich promennych.
-#  
-  def nacti_parametry(instance)
-    @instance = instance
-    @poc_klauzuli = instance.pocet_klauzuli
-    @poc_promennych_instance = instance.pocet_promennych
-    @soucet_vsech_vah = instance.vrat_celkovy_soucet_vah
-    @populace = Array.new(VELIKOST_POPULACE)
-    citac = 0
-    while(citac < VELIKOST_POPULACE)do
-      @populace[citac] = Array.new(@poc_promennych_instance)
-      citac +=1
-    end
-  end
-  
+
 ##
 #Tato metoda slouzi ke spusteni genetickeho algoritmu. Vystupem je instance WSAT problemu se zapsanymi hodntami ziskanimi prubehem algoritmu.
 #   
@@ -154,6 +139,25 @@ class WSATGenetikou
     return instance
     
   end
+
+private
+
+##
+#Tato metoda slouzi k nacteni instancnich promennych.
+#  
+  def nacti_parametry(instance)
+    @instance = instance
+    @poc_klauzuli = instance.pocet_klauzuli
+    @poc_promennych_instance = instance.pocet_promennych
+    @soucet_vsech_vah = instance.vrat_celkovy_soucet_vah
+    @populace = Array.new(VELIKOST_POPULACE)
+    citac = 0
+    while(citac < VELIKOST_POPULACE)do
+      @populace[citac] = Array.new(@poc_promennych_instance)
+      citac +=1
+    end
+  end
+  
 
 ##
 #Tato metoda slouzi k vygenerovani nahodnych vektiru jedincu pocatecni populace.

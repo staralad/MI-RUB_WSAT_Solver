@@ -21,6 +21,21 @@ class WSATHrubouSilou
   #attr_reader
   attr_accessor :nejlepsi_reseni
 
+
+##
+#Tato metoda slouzi k spusteni reseni WSAT problemu.
+#  
+  def start(instance)
+    nacti_parametry(instance)
+    zapis_umisteni_prom(instance.klauzule) # vypise do 2D seznamu jednotlove umisteni promennych
+    reseni = vytvor_nulovy_vektor(@poc_promennych_instance) # nulovy vektor
+    hruba_sila(0, 0, 0, reseni, je_formule_splnitelna?(reseni))
+    instance.zapis_vysledek(@nejlepsi_reseni, je_formule_splnitelna?(@nejlepsi_reseni)) # zkontroluje, zda pro vysledek je formule splnitelna (napr. kdyby zustal nulový vektor jako reseni) a zapise vysledky
+    return instance 
+  end
+
+private  
+
 ##
 #Tato metoda slouzi k nacteni dat z pole retezcu (parametr "instance") do datovych struktur.
 #  
@@ -34,17 +49,6 @@ class WSATHrubouSilou
     @umisteni_prom = Array.new(@poc_promennych_instance)
   end
 
-##
-#Tato metoda slouzi k spusteni reseni WSAT problemu.
-#  
-  def start(instance)
-    nacti_parametry(instance)
-    zapis_umisteni_prom(instance.klauzule) # vypise do 2D seznamu jednotlove umisteni promennych
-    reseni = vytvor_nulovy_vektor(@poc_promennych_instance) # nulovy vektor
-    hruba_sila(0, 0, 0, reseni, je_formule_splnitelna?(reseni))
-    instance.zapis_vysledek(@nejlepsi_reseni, je_formule_splnitelna?(@nejlepsi_reseni)) # zkontroluje, zda pro vysledek je formule splnitelna (napr. kdyby zustal nulový vektor jako reseni) a zapise vysledky
-    return instance 
-  end
 
 ##
 #Tato rekurzivni metoda je jadrem prostupu reseni hrubou silou. Rekurzivne vola sebe sama a tim tvori strom rekurze, dokud nedojde k listum, nebo neni predcasne prorezana. 

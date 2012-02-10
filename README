@@ -20,3 +20,10 @@ Nazev algoritmu | Splnitelnost |  Vektor reseni WSAT  | Soucet vah | Vypocetni c
  Geneticky alg.       true      (11101111110101110110)        78      5838.334 ms
 -----------------------------------------------------------------------------------------
  Relativni chyba:  1.27 %
+ 
+ 
+Spouštìní:
+$ ruby ./bin/main.rb ./instance/uf20-01.cnf(w)
+
+Testy:
+$ ruby ./test/test_wsat_solver.rb
