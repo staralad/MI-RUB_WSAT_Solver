@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="CP852"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=CP852" http-equiv="Content-Type" />
+
+  <title>Class: WSATHrubouSilou</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./wsat_hrubou_silou_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="wsat_hrubou_silou.rb">wsat_hrubou_silou.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-hruba_sila">#hruba_sila</a></li>
+          
+          <li><a href="#method-i-je_formule_pouzitelna-3F">#je_formule_pouzitelna?</a></li>
+          
+          <li><a href="#method-i-je_formule_splnitelna-3F">#je_formule_splnitelna?</a></li>
+          
+          <li><a href="#method-i-nacti_parametry">#nacti_parametry</a></li>
+          
+          <li><a href="#method-i-start">#start</a></li>
+          
+          <li><a href="#method-i-vypis_reseni">#vypis_reseni</a></li>
+          
+          <li><a href="#method-i-vytvor_nulovy_vektor">#vytvor_nulovy_vektor</a></li>
+          
+          <li><a href="#method-i-zapis_umisteni_prom">#zapis_umisteni_prom</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./InstanceWSAT.html">InstanceWSAT</a></li>
+        
+          <li><a href="./Krizeni.html">Krizeni</a></li>
+        
+          <li><a href="./KrizeniDvoubodove.html">KrizeniDvoubodove</a></li>
+        
+          <li><a href="./KrizeniJednobodove.html">KrizeniJednobodove</a></li>
+        
+          <li><a href="./KrizeniUniformni.html">KrizeniUniformni</a></li>
+        
+          <li><a href="./ModifikatorInstanci.html">ModifikatorInstanci</a></li>
+        
+          <li><a href="./WSATGenetikou.html">WSATGenetikou</a></li>
+        
+          <li><a href="./WSATHrubouSilou.html">WSATHrubouSilou</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">WSATHrubouSilou</h1>
+
+    <div id="description" class="description">
+      
+<p>Trida <a href="WSATHrubouSilou.html">WSATHrubouSilou</a> reprezentuje
+algoritmus resici WSAT problem pomoci pristupu hrubou silou (tj.
+prozkoumava cely stavovy prostor problemu). Prijima jediny parametr
+(true/false), ktery urcuje, zda se pouzije prorezavani vetvi stromu
+rekurze, ktere nevedou k vysledku.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+      <!-- Attributes -->
+      <div id="attribute-method-details" class="method-section section">
+        <h3 class="section-header">Attributes</h3>
+
+        
+        <div id="nejlepsi_reseni-attribute-method" class="method-detail">
+          <a name="nejlepsi_reseni"></a>
+          
+          <a name="nejlepsi_reseni="></a>
+          
+          <div class="method-heading attribute-method-heading">
+            <span class="method-name">nejlepsi_reseni</span><span
+              class="attribute-access-type">[RW]</span>
+          </div>
+
+          <div class="method-description">
+          
+          <p>attr_reader</p>
+          
+          </div>
+        </div>
+        
+      </div><!-- attribute-method-details -->
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(prorezavani)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k uvodni inicializaci instancnich promennych.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File wsat_hrubou_silou.rb, line 11</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">prorezavani</span>)
+  <span class="ruby-ivar">@prorezavani</span> = <span class="ruby-identifier">prorezavani</span>                 <span class="ruby-comment"># pouzit prorezavani</span>
+  <span class="ruby-ivar">@poc_klauzuli</span> = <span class="ruby-value">0</span>                          <span class="ruby-comment"># pocet klauzuli formule</span>
+  <span class="ruby-ivar">@poc_promennych_instance</span> = <span class="ruby-value">0</span>               <span class="ruby-comment"># pocet promennych formule</span>
+  <span class="ruby-ivar">@soucet_vsech_vah</span> = <span class="ruby-value">0</span>                      <span class="ruby-comment"># maximalni soucet ohodnoceni vah</span>
+  <span class="ruby-ivar">@nej_soucet_vah</span> = <span class="ruby-value">0</span>                        <span class="ruby-comment"># vysledny soucet vah ziskaneho reseni</span>
+  <span class="ruby-ivar">@nejlepsi_reseni</span> = <span class="ruby-keyword">nil</span>                     <span class="ruby-comment"># reprezentace ziskaneho reseni (pole true/false hodnot)</span>
+  <span class="ruby-ivar">@instance</span> = <span class="ruby-keyword">nil</span>                            <span class="ruby-comment"># instance WSAT problemu</span>
+  <span class="ruby-ivar">@umisteni_prom</span> = <span class="ruby-keyword">nil</span>                       <span class="ruby-comment"># 2D pole udrzujici info. o vyskytu promennych v klauzulich</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="hruba_sila-method" class="method-detail ">
+          <a name="method-i-hruba_sila"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">hruba_sila</span><span
+              class="method-args">(pozice, pred_soucet_vah, pred_soucet_vah_vyrazenych, nastaveni, je_splnena)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato rekurzivni metoda je jadrem prostupu reseni hrubou silou. Rekurzivne
+vola sebe sama a tim tvori strom rekurze, dokud nedojde k listum, nebo neni
+predcasne prorezana.</p>
+            
+
+            
+            <div class="method-source-code" id="hruba_sila-source">
+<pre>
+<span class="ruby-comment"># File wsat_hrubou_silou.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">hruba_sila</span>(<span class="ruby-identifier">pozice</span>, <span class="ruby-identifier">pred_soucet_vah</span>, <span class="ruby-identifier">pred_soucet_vah_vyrazenych</span>, <span class="ruby-identifier">nastaveni</span>, <span class="ruby-identifier">je_splnena</span>)
+  <span class="ruby-identifier">soucet_vah_vyrazenych</span> = <span class="ruby-identifier">pred_soucet_vah_vyrazenych</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">pozice</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@poc_promennych_instance</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-ivar">@prorezavani</span> <span class="ruby-operator">||</span> (<span class="ruby-ivar">@nej_soucet_vah</span> <span class="ruby-operator">&lt;</span> (<span class="ruby-ivar">@soucet_vsech_vah</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">soucet_vah_vyrazenych</span>))) <span class="ruby-keyword">then</span> <span class="ruby-comment">#(PROREZAVANI) pokud nemuze byt lepsi jak nejlepsi ani po pricteni zbyvajicich moznych vah</span>
+      <span class="ruby-identifier">nastaveni</span>[<span class="ruby-identifier">pozice</span>] = <span class="ruby-keyword">true</span> <span class="ruby-comment"># zkusím proměnnou s indexem &quot;pozice&quot; dát na &quot;true&quot;</span>
+      <span class="ruby-keyword">if</span>(<span class="ruby-operator">!</span><span class="ruby-identifier">je_formule_pouzitelna?</span>(<span class="ruby-identifier">pozice</span>, <span class="ruby-identifier">nastaveni</span>)) <span class="ruby-keyword">then</span> <span class="ruby-comment"># pokud obsahuje konecne nesplnene klausule</span>
+        <span class="ruby-identifier">nastaveni</span>[<span class="ruby-identifier">pozice</span>] = <span class="ruby-keyword">false</span> <span class="ruby-comment"># vratim zmenu</span>
+        <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">je_splnena</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-ivar">@nej_soucet_vah</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">pred_soucet_vah</span>))<span class="ruby-keyword">then</span>  <span class="ruby-comment"># pokud predchozi formule byla splnena &amp;&amp; pokud mam lepsi reseni  </span>
+          <span class="ruby-ivar">@nejlepsi_reseni</span> = <span class="ruby-identifier">nastaveni</span>.<span class="ruby-identifier">dup</span> <span class="ruby-comment"># zapise novy vysledek</span>
+          <span class="ruby-ivar">@nej_soucet_vah</span> = <span class="ruby-identifier">pred_soucet_vah</span> <span class="ruby-comment"># zapise novy vysledny soucet vah</span>
+        <span class="ruby-keyword">end</span>  
+      <span class="ruby-keyword">else</span> <span class="ruby-comment"># pokud je F pouzitelna</span>
+        <span class="ruby-identifier">soucet_vah</span> = <span class="ruby-identifier">pred_soucet_vah</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">pole_vah</span>[<span class="ruby-identifier">pozice</span>].<span class="ruby-identifier">to_i</span>
+        <span class="ruby-identifier">hruba_sila</span>(<span class="ruby-identifier">pozice</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">soucet_vah</span>, <span class="ruby-identifier">soucet_vah_vyrazenych</span>, <span class="ruby-identifier">nastaveni</span>, <span class="ruby-identifier">je_formule_splnitelna?</span>(<span class="ruby-identifier">nastaveni</span>))
+        <span class="ruby-identifier">nastaveni</span>[<span class="ruby-identifier">pozice</span>] = <span class="ruby-keyword">false</span> <span class="ruby-comment"># vratim na false, abych mohl prejit k testovani s nulou na teto pozici</span>
+      <span class="ruby-keyword">end</span> 
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">nastaveni</span>[<span class="ruby-identifier">pozice</span>] = <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">soucet_vah_vyrazenych</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">pole_vah</span>[<span class="ruby-identifier">pozice</span>] <span class="ruby-comment"># prictu vahu k vyrazenym, abych mohl prejít k testovani s nulou na teto pozici</span>
+    
+    <span class="ruby-identifier">pozice</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+     
+  <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">je_splnena</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-ivar">@nej_soucet_vah</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">pred_soucet_vah</span>)) <span class="ruby-keyword">then</span>
+    <span class="ruby-ivar">@nejlepsi_reseni</span> = <span class="ruby-identifier">nastaveni</span>.<span class="ruby-identifier">dup</span> <span class="ruby-comment"># zapise novy vysledek</span>
+    <span class="ruby-ivar">@nej_soucet_vah</span> = <span class="ruby-identifier">pred_soucet_vah</span> <span class="ruby-comment"># zapise novy vysledny soucet vah</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- hruba_sila-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- hruba_sila-method -->
+
+      
+        <div id="je_formule_pouzitelna-3F-method" class="method-detail ">
+          <a name="method-i-je_formule_pouzitelna-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">je_formule_pouzitelna?</span><span
+              class="method-args">(pozice, nastaveni)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k zjisteni, zda existuji pro dane "nastaveni" (tedy
+jedince) konecna (jiz nemenici se) klauzule, ktera je nesplnena. Protoze
+jedna nesplnena klauzule ve formuli tvaru CNF znamena nesplnenou celou
+formuli a tudiz, ze se nejedna o reseni naseho problemu.</p>
+            
+
+            
+            <div class="method-source-code" id="je_formule_pouzitelna-3F-source">
+<pre>
+<span class="ruby-comment"># File wsat_hrubou_silou.rb, line 85</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">je_formule_pouzitelna?</span>(<span class="ruby-identifier">pozice</span>, <span class="ruby-identifier">nastaveni</span>) <span class="ruby-comment"># neboli neexistuji konecne klauzule, ktere jsou NESPLNENE</span>
+
+  <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@umisteni_prom</span>[<span class="ruby-identifier">pozice</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>)<span class="ruby-keyword">then</span>
+    <span class="ruby-identifier">nove_pole</span> = []
+    <span class="ruby-ivar">@umisteni_prom</span>[<span class="ruby-identifier">pozice</span>]= <span class="ruby-identifier">nove_pole</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-ivar">@umisteni_prom</span>[<span class="ruby-identifier">pozice</span>].<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cislo</span><span class="ruby-operator">|</span>   <span class="ruby-comment"># projde vsechny klauzule, ktere zmenena promenna ovlivnuje</span>
+    <span class="ruby-identifier">poc_prom</span> = <span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">cislo</span>].<span class="ruby-identifier">length</span> 
+    <span class="ruby-identifier">jsou_hotove</span> = <span class="ruby-keyword">true</span> <span class="ruby-comment"># jsou pevne stanoveny vsechny prom. v klazuli?</span>
+    <span class="ruby-identifier">je_splnena</span> = <span class="ruby-keyword">false</span>
+  
+    <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">poc_prom</span>)<span class="ruby-keyword">do</span>
+      <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">cislo</span>][<span class="ruby-identifier">citac</span>].<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">pozice</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>))<span class="ruby-keyword">then</span> <span class="ruby-comment"># pozice je od 0 a promenne od 1 =&gt; pozice+1</span>
+        <span class="ruby-identifier">jsou_hotove</span> = <span class="ruby-keyword">false</span> <span class="ruby-comment"># pokud se najde v klauzuli promenna s vyssim indexem, tak jeste neni klazule definitivne urcena</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">poradi_v_nastaveni</span> = <span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">cislo</span>][<span class="ruby-identifier">citac</span>].<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">if</span>(((<span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">cislo</span>][<span class="ruby-identifier">citac</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">nastaveni</span>[<span class="ruby-identifier">poradi_v_nastaveni</span>])) <span class="ruby-operator">||</span> ((<span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">cislo</span>][<span class="ruby-identifier">citac</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">nastaveni</span>[<span class="ruby-identifier">poradi_v_nastaveni</span>])) <span class="ruby-keyword">then</span> <span class="ruby-comment"># je klauzule splnena?</span>
+        <span class="ruby-identifier">je_splnena</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span> 
+    
+    <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">jsou_hotove</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">je_splnena</span>))<span class="ruby-keyword">then</span> <span class="ruby-comment"># pokud je klauzule urcena definitivne timto ohodnocenim a je nesplnena =&gt; cela formule nesplnena</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- je_formule_pouzitelna-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- je_formule_pouzitelna-3F-method -->
+
+      
+        <div id="je_formule_splnitelna-3F-method" class="method-detail ">
+          <a name="method-i-je_formule_splnitelna-3F"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">je_formule_splnitelna?</span><span
+              class="method-args">(reseni)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda pro dane reseni (jedince) zjisti, zda je cela formule splnena a
+vrati true/false hodnotu.</p>
+            
+
+            
+            <div class="method-source-code" id="je_formule_splnitelna-3F-source">
+<pre>
+<span class="ruby-comment"># File wsat_hrubou_silou.rb, line 154</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">je_formule_splnitelna?</span>(<span class="ruby-identifier">reseni</span>)
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>.<span class="ruby-identifier">length</span>)<span class="ruby-keyword">do</span> <span class="ruby-comment"># prochazi jednotlive klauzule</span>
+    <span class="ruby-identifier">je_splnena</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-identifier">citac2</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">citac</span>].<span class="ruby-identifier">length</span>)<span class="ruby-keyword">do</span> <span class="ruby-comment"># prochazi promennne klauzule</span>
+      <span class="ruby-identifier">poradi_v_reseni</span> = <span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">citac</span>][<span class="ruby-identifier">citac2</span>].<span class="ruby-identifier">abs</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-comment"># poradi v logickem vektoru reseni</span>
+      <span class="ruby-keyword">if</span> (((<span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">citac</span>][<span class="ruby-identifier">citac2</span>] <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">reseni</span>[<span class="ruby-identifier">poradi_v_reseni</span>])) <span class="ruby-operator">||</span> ((<span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">citac</span>][<span class="ruby-identifier">citac2</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">reseni</span>[<span class="ruby-identifier">poradi_v_reseni</span>])) <span class="ruby-keyword">then</span> <span class="ruby-comment"># je klauzule splnena?</span>
+        <span class="ruby-identifier">je_splnena</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>    
+      <span class="ruby-identifier">citac2</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">je_splnena</span>) <span class="ruby-keyword">then</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- je_formule_splnitelna-3F-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- je_formule_splnitelna-3F-method -->
+
+      
+        <div id="nacti_parametry-method" class="method-detail ">
+          <a name="method-i-nacti_parametry"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">nacti_parametry</span><span
+              class="method-args">(instance)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k nacteni dat z pole retezcu (parametr "instance") do
+datovych struktur.</p>
+            
+
+            
+            <div class="method-source-code" id="nacti_parametry-source">
+<pre>
+<span class="ruby-comment"># File wsat_hrubou_silou.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nacti_parametry</span>(<span class="ruby-identifier">instance</span>)
+  <span class="ruby-ivar">@instance</span> = <span class="ruby-identifier">instance</span>
+  <span class="ruby-ivar">@soucet_vsech_vah</span> = <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">vrat_celkovy_soucet_vah</span> 
+  <span class="ruby-ivar">@poc_promennych_instance</span> = <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">pocet_promennych</span>
+  <span class="ruby-ivar">@poc_klauzuli</span> = <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">pocet_klauzuli</span>
+  <span class="ruby-ivar">@umisteni_prom</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@poc_promennych_instance</span>)
+  <span class="ruby-ivar">@nejlepsi_reseni</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@poc_promennych_instance</span>)
+  <span class="ruby-ivar">@umisteni_prom</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@poc_promennych_instance</span>)
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- nacti_parametry-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- nacti_parametry-method -->
+
+      
+        <div id="start-method" class="method-detail ">
+          <a name="method-i-start"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">start</span><span
+              class="method-args">(instance)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k spusteni reseni WSAT problemu.</p>
+            
+
+            
+            <div class="method-source-code" id="start-source">
+<pre>
+<span class="ruby-comment"># File wsat_hrubou_silou.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">start</span>(<span class="ruby-identifier">instance</span>)
+  <span class="ruby-identifier">nacti_parametry</span>(<span class="ruby-identifier">instance</span>)
+  <span class="ruby-identifier">zapis_umisteni_prom</span>(<span class="ruby-identifier">instance</span>.<span class="ruby-identifier">klauzule</span>) <span class="ruby-comment"># vypise do 2D seznamu jednotlove umisteni promennych</span>
+  <span class="ruby-identifier">reseni</span> = <span class="ruby-identifier">vytvor_nulovy_vektor</span>(<span class="ruby-ivar">@poc_promennych_instance</span>) <span class="ruby-comment"># nulovy vektor</span>
+  <span class="ruby-identifier">hruba_sila</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">reseni</span>, <span class="ruby-identifier">je_formule_splnitelna?</span>(<span class="ruby-identifier">reseni</span>))
+  <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">zapis_vysledek</span>(<span class="ruby-ivar">@nejlepsi_reseni</span>, <span class="ruby-identifier">je_formule_splnitelna?</span>(<span class="ruby-ivar">@nejlepsi_reseni</span>)) <span class="ruby-comment"># zkontroluje, zda pro vysledek je formule splnitelna (napr. kdyby zustal nulový vektor jako reseni) a zapise vysledky</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">instance</span> 
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- start-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- start-method -->
+
+      
+        <div id="vypis_reseni-method" class="method-detail ">
+          <a name="method-i-vypis_reseni"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vypis_reseni</span><span
+              class="method-args">(reseni)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi pouze pro kontrolu. A vypisuje na standardni vystup dane
+reseni.</p>
+            
+
+            
+            <div class="method-source-code" id="vypis_reseni-source">
+<pre>
+<span class="ruby-comment"># File wsat_hrubou_silou.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vypis_reseni</span>(<span class="ruby-identifier">reseni</span>)
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;reseni(BF): &quot;</span>
+  <span class="ruby-identifier">reseni</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">prvek</span><span class="ruby-operator">|</span>  
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">prvek</span>) <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;1&quot;</span>
+    <span class="ruby-keyword">else</span> 
+      <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;0&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">print</span> <span class="ruby-node">&quot; #{@instance.vrat_soucet_vah(reseni)} &quot;</span>
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vypis_reseni-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vypis_reseni-method -->
+
+      
+        <div id="vytvor_nulovy_vektor-method" class="method-detail ">
+          <a name="method-i-vytvor_nulovy_vektor"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vytvor_nulovy_vektor</span><span
+              class="method-args">(pocet)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k vytvoreni vektoru false hodnot reprezentujiciho
+pocatecniho jedince.</p>
+            
+
+            
+            <div class="method-source-code" id="vytvor_nulovy_vektor-source">
+<pre>
+<span class="ruby-comment"># File wsat_hrubou_silou.rb, line 143</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vytvor_nulovy_vektor</span>(<span class="ruby-identifier">pocet</span>)
+  <span class="ruby-identifier">vystup</span> = []
+  <span class="ruby-identifier">pocet</span>.<span class="ruby-identifier">times</span> {
+    <span class="ruby-identifier">vystup</span>[<span class="ruby-identifier">vystup</span>.<span class="ruby-identifier">length</span>] = <span class="ruby-keyword">false</span>
+  }
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">vystup</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vytvor_nulovy_vektor-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vytvor_nulovy_vektor-method -->
+
+      
+        <div id="zapis_umisteni_prom-method" class="method-detail ">
+          <a name="method-i-zapis_umisteni_prom"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">zapis_umisteni_prom</span><span
+              class="method-args">(klauzule)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k zapsani nalezeneho umisteni promenne do 2D pole
+vyskytu promennych.</p>
+            
+
+            
+            <div class="method-source-code" id="zapis_umisteni_prom-source">
+<pre>
+<span class="ruby-comment"># File wsat_hrubou_silou.rb, line 119</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">zapis_umisteni_prom</span>(<span class="ruby-identifier">klauzule</span>)
+  <span class="ruby-comment"># prohleda vsechny klauzule a zapise jejich promenne na patricna mista v seznamu</span>
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@poc_klauzuli</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">poc_prom</span> = <span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">citac</span>].<span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">citac2</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">poc_prom</span>)<span class="ruby-keyword">do</span> <span class="ruby-comment"># zapisuji vsechny promenne</span>
+      <span class="ruby-identifier">index_prom_v_poli</span> = <span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">citac</span>][<span class="ruby-identifier">citac2</span>].<span class="ruby-identifier">to_i</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-comment"># .abs -&gt; absolutni hodnota cisla</span>
+      <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@umisteni_prom</span>[<span class="ruby-identifier">index_prom_v_poli</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span>(<span class="ruby-ivar">@umisteni_prom</span>[<span class="ruby-identifier">index_prom_v_poli</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">citac</span>))) <span class="ruby-keyword">then</span> <span class="ruby-comment"># pokud jiz nemam poznamenan index teto klauzule</span>
+        <span class="ruby-keyword">if</span>(<span class="ruby-ivar">@umisteni_prom</span>[<span class="ruby-identifier">index_prom_v_poli</span>]<span class="ruby-operator">==</span><span class="ruby-keyword">nil</span>)<span class="ruby-keyword">then</span>
+          <span class="ruby-identifier">nove_pole</span> = []
+          <span class="ruby-ivar">@umisteni_prom</span>[<span class="ruby-identifier">index_prom_v_poli</span>]=<span class="ruby-identifier">nove_pole</span>
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-ivar">@umisteni_prom</span>[<span class="ruby-identifier">index_prom_v_poli</span>][<span class="ruby-ivar">@umisteni_prom</span>[<span class="ruby-identifier">index_prom_v_poli</span>].<span class="ruby-identifier">length</span>] = <span class="ruby-identifier">citac</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">citac2</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>         
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- zapis_umisteni_prom-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- zapis_umisteni_prom-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+Weighted SAT problem Solver  (Genetický algoritmus)
+
+Popis problému
+--------------
+Øešení problému vážené splnitelnosti booleovské formule neboli zkrácenì øešení WSAT problému obsahuje následující:
+Je dána booleovská formule F promìnnných X=(x1, x2, … , xn) v konjunktivní normální formì (tj. souèin souètù). Dále jsou dány celoèíselné kladné váhy W=(w1, w2, … , wn). Najdìte ohodnocení Y=(y1, y2, … , yn) promìnných x1, x2, … , xn tak, aby F(Y)=1 a souèet vah promìnných, které jsou ohodnoceny jednièkou, byl maximální.
+POZN.: Je pøípustné se omezit na formule, v nichž má každá klauzule právì 3 literály (problém 3 SAT). Takto omezený problém je stejnì tìžký, ale možná se lépe programuje a lépe se posuzuje obtížnost instance.
+
+Zkušební data
+
+Ve své práci využívám zkušební instance pro problém 3SAT z databáze SATLIB, které jsou ke stažení na adrese http://www.cs.ubc.ca/~hoos/SATLIB/benchm.html. Tyto instance jsou ve formátu DIMACS, jenž pomocí náhodného generátoru modifikuji o vektor vah, abych je mohl použít pro zkoumání WSAT problému. Do každého souboru je pøímo pod definici dat pøidána øádka, která zaèíná písmenem “w“ a pokraèuje hodnotami vah jednotlivých promìnných. Takto modifikovaný soubor má koncovku “.cnfw“. Selmanova prezentace uvedená v odkazech (zde), poukazuje na to, že 3SAT problém je stejnì tìžký jako obdobný SAT problém. Z toho dùvodu ponechávám pøi experimentu instance ve tvaru 3SAT.
+
+
+Zkušební instance jsou v adresáøi "instance".
+
+UKÁZKA VÝSTUPU:
+---------------
+Nazev algoritmu | Splnitelnost |  Vektor reseni WSAT  | Soucet vah | Vypocetni cas  
+ Hruba sila           true      (11101111111111100110)        79     11580.662 ms
+ Geneticky alg.       true      (11101111110101110110)        78      5838.334 ms
+-----------------------------------------------------------------------------------------
+ Relativni chyba:  1.27 %

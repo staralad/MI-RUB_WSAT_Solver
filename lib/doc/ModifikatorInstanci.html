@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="CP852"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=CP852" http-equiv="Content-Type" />
+
+  <title>Class: ModifikatorInstanci</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./modifikator_instanci_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="modifikator_instanci.rb">modifikator_instanci.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-generuj_vahy">#generuj_vahy</a></li>
+          
+          <li><a href="#method-i-vrat_modif_instanci">#vrat_modif_instanci</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./InstanceWSAT.html">InstanceWSAT</a></li>
+        
+          <li><a href="./Krizeni.html">Krizeni</a></li>
+        
+          <li><a href="./KrizeniDvoubodove.html">KrizeniDvoubodove</a></li>
+        
+          <li><a href="./KrizeniJednobodove.html">KrizeniJednobodove</a></li>
+        
+          <li><a href="./KrizeniUniformni.html">KrizeniUniformni</a></li>
+        
+          <li><a href="./ModifikatorInstanci.html">ModifikatorInstanci</a></li>
+        
+          <li><a href="./WSATGenetikou.html">WSATGenetikou</a></li>
+        
+          <li><a href="./WSATHrubouSilou.html">WSATHrubouSilou</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">ModifikatorInstanci</h1>
+
+    <div id="description" class="description">
+      
+<p>Trida <a href="ModifikatorInstanci.html">ModifikatorInstanci</a> slouzi k
+dogenerovani nahodneho vektoru vah do instance SAT problemu a tim jej zmeni
+na WSAT problem, ktery prohram dale resi.</p>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(pole_dat, max_vaha)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k inicializaci instancnich promennych.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File modifikator_instanci.rb, line 9</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">pole_dat</span>, <span class="ruby-identifier">max_vaha</span>)
+  <span class="ruby-ivar">@pole_dat</span> = <span class="ruby-identifier">pole_dat</span>            <span class="ruby-comment"># pole retezcu puvodni nactene SAT instance</span>
+  <span class="ruby-ivar">@max_vaha</span> = <span class="ruby-identifier">max_vaha</span>            <span class="ruby-comment"># udava maximalni vahu, kterou generator muze vygenerovat (minimalni je 1)</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="generuj_vahy-method" class="method-detail ">
+          <a name="method-i-generuj_vahy"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generuj_vahy</span><span
+              class="method-args">(radek)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k vygenerovani retezce s nahodnymi vahami.</p>
+            
+
+            
+            <div class="method-source-code" id="generuj_vahy-source">
+<pre>
+<span class="ruby-comment"># File modifikator_instanci.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generuj_vahy</span>(<span class="ruby-identifier">radek</span>)
+  <span class="ruby-identifier">pole_vah</span>=[]
+  
+  <span class="ruby-identifier">pole</span> = <span class="ruby-identifier">radek</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">' '</span>) <span class="ruby-comment"># ze stringu udela pole podle mezer</span>
+  <span class="ruby-identifier">poc_promennych</span> = <span class="ruby-identifier">pole</span>[<span class="ruby-value">2</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-comment">#zjistíme pocet promennych instance</span>
+  
+  <span class="ruby-identifier">poc_promennych</span>.<span class="ruby-identifier">times</span>{      
+    <span class="ruby-identifier">pole_vah</span>[<span class="ruby-identifier">pole_vah</span>.<span class="ruby-identifier">length</span>]=<span class="ruby-value">1</span><span class="ruby-operator">+</span><span class="ruby-constant">Random</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@max_vaha</span>) <span class="ruby-comment"># vygeneruje nahodne vahu od 1 do max. vahy</span>
+  }
+  <span class="ruby-comment">## puts pole_vah.join(' ') </span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">pole_vah</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generuj_vahy-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generuj_vahy-method -->
+
+      
+        <div id="vrat_modif_instanci-method" class="method-detail ">
+          <a name="method-i-vrat_modif_instanci"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vrat_modif_instanci</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi ke spravnemu zapsani retezce s nahodne vygenerovanymi
+vahami do WSAT instance reprezentovane retezcem.</p>
+            
+
+            
+            <div class="method-source-code" id="vrat_modif_instanci-source">
+<pre>
+<span class="ruby-comment"># File modifikator_instanci.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vrat_modif_instanci</span>
+  <span class="ruby-identifier">vystup</span>=<span class="ruby-string">&quot;&quot;</span>
+  <span class="ruby-ivar">@pole_dat</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">radek</span><span class="ruby-operator">|</span>  
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">radek</span>[<span class="ruby-value">0</span>]<span class="ruby-operator">==</span><span class="ruby-string">&quot;p&quot;</span>)<span class="ruby-keyword">then</span>     
+      <span class="ruby-identifier">vystup</span> <span class="ruby-operator">+=</span><span class="ruby-identifier">radek</span>
+      <span class="ruby-identifier">vystup</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;w #{generuj_vahy(radek).join(' ')}\n&quot;</span> <span class="ruby-comment">#pridani radku s vahami</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">vystup</span> <span class="ruby-operator">+=</span><span class="ruby-identifier">radek</span>
+    <span class="ruby-keyword">end</span>     
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># puts vystup</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">vystup</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vrat_modif_instanci-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vrat_modif_instanci-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+

@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="CP852"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta content="text/html; charset=CP852" http-equiv="Content-Type" />
+
+  <title>Class: WSATGenetikou</title>
+
+  <link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+  <script src="./js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body id="top" class="class">
+
+  <div id="metadata">
+    <div id="home-metadata">
+      <div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+      </div>
+    </div>
+
+    <div id="file-metadata">
+      <div id="file-list-section" class="section">
+        <h3 class="section-header">In Files</h3>
+        <div class="section-body">
+          <ul>
+          
+            <li><a href="./wsat_genetikou_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="wsat_genetikou.rb">wsat_genetikou.rb</a></li>
+          
+          </ul>
+        </div>
+      </div>
+
+      
+    </div>
+
+    <div id="class-metadata">
+      
+      <!-- Parent Class -->
+      <div id="parent-class-section" class="section">
+        <h3 class="section-header">Parent</h3>
+        
+        <p class="link">Object</p>
+        
+      </div>
+      
+
+      
+
+      
+
+      
+      <!-- Method Quickref -->
+      <div id="method-list-section" class="section">
+        <h3 class="section-header">Methods</h3>
+        <ul class="link-list">
+          
+          <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-dej_pocet_splnenych_klauzuli">#dej_pocet_splnenych_klauzuli</a></li>
+          
+          <li><a href="#method-i-dej_sampiona">#dej_sampiona</a></li>
+          
+          <li><a href="#method-i-dej_vyherce">#dej_vyherce</a></li>
+          
+          <li><a href="#method-i-generuj_populaci">#generuj_populaci</a></li>
+          
+          <li><a href="#method-i-mutace">#mutace</a></li>
+          
+          <li><a href="#method-i-nacti_parametry">#nacti_parametry</a></li>
+          
+          <li><a href="#method-i-start">#start</a></li>
+          
+          <li><a href="#method-i-turnajovy_vyber">#turnajovy_vyber</a></li>
+          
+          <li><a href="#method-i-vypis_jedince">#vypis_jedince</a></li>
+          
+          <li><a href="#method-i-vypis_populaci">#vypis_populaci</a></li>
+          
+          <li><a href="#method-i-vypocti_fitness">#vypocti_fitness</a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+    </div>
+
+    <div id="project-metadata">
+      
+      
+
+      <div id="classindex-section" class="section project-section">
+        <h3 class="section-header">Class/Module Index
+          <span class="search-toggle"><img src="./images/find.png"
+            height="16" width="16" alt="[+]"
+            title="show/hide quicksearch" /></span></h3>
+        <form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+        <fieldset>
+          <legend>Quicksearch</legend>
+          <input type="text" name="quicksearch" value=""
+            class="quicksearch-field" />
+        </fieldset>
+        </form>
+
+        <ul class="link-list">
+        
+          <li><a href="./InstanceWSAT.html">InstanceWSAT</a></li>
+        
+          <li><a href="./Krizeni.html">Krizeni</a></li>
+        
+          <li><a href="./KrizeniDvoubodove.html">KrizeniDvoubodove</a></li>
+        
+          <li><a href="./KrizeniJednobodove.html">KrizeniJednobodove</a></li>
+        
+          <li><a href="./KrizeniUniformni.html">KrizeniUniformni</a></li>
+        
+          <li><a href="./ModifikatorInstanci.html">ModifikatorInstanci</a></li>
+        
+          <li><a href="./WSATGenetikou.html">WSATGenetikou</a></li>
+        
+          <li><a href="./WSATHrubouSilou.html">WSATHrubouSilou</a></li>
+        
+        </ul>
+        <div id="no-class-search-results" style="display: none;">No matching classes.</div>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <div id="documentation">
+    <h1 class="class">WSATGenetikou</h1>
+
+    <div id="description" class="description">
+      
+<p>Trida <a href="WSATGenetikou.html">WSATGenetikou</a> slouzi reprezentaci
+iterativniho algoritmu resiciho problem WSATu metodami inspirovanymi
+prirodou.</p>
+
+<pre>Obecny popis algoritmu:
+--------------------------------------------------------------------------------- 
+1)Vygeneruj nahodnou pocatecni populaci P(0)                                       
+2)N-krat opakuj:                                                                   
+    3) Vytvor novou praznou populaci P(N)                                          
+         4)Pouzij selekci na omezeny pocet rodicu z populace P(N-1) a na vitezne:  
+             5)pouzij se zvolenou pravdepodobnosti krizeni                         
+             6)pouzij na kazdy bit jedince s urcitou pravdepodobnosti mutaci       
+     7)Pridej potomky do nove populace                                            
+     8)Nahrad starou populaci novou populaci P(N-1)=P(N)                           
+9)Potomek z populace P(N) s nejlepsi kondici (fitness) je resenim                  
+---------------------------------------------------------------------------------</pre>
+
+    </div><!-- description -->
+
+    
+    
+    
+    <div id="5Buntitled-5D" class="documentation-section">
+      
+
+      
+
+      
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="POCET_GENERACI">POCET_GENERACI</a></dt>
+          
+          <dd class="description"><p>Pocet generaci (pocet iteraci algoritmu).</p></dd>
+          
+        
+          <dt><a name="POUZIT_TREST_SMRTI">POUZIT_TREST_SMRTI</a></dt>
+          
+          <dd class="description"><p>TREST SMRTI znamena automaticke nastavovani zdatnosti rovne 0 jedincum,
+kteri aktualne nejsou resenim problemu.</p></dd>
+          
+        
+          <dt><a name="PROSTOR_K_POMERENI_ZDATNOSTI_NERESENI">PROSTOR_K_POMERENI_ZDATNOSTI_NERESENI</a></dt>
+          
+          <dd class="description"><p>Pokud nebude TREST SMRTI uplatnovan, tak kolik procent maximalniho
+ohodnoceni zdatnosti mohou ziskat jedinci, kteri aktualni nejsou resenim
+problemu.</p></dd>
+          
+        
+          <dt><a name="P_KRIZENI">P_KRIZENI</a></dt>
+          
+          <dd class="description"><p>Pravdepodobnost, ze dojde ke krizeni jedincu.</p></dd>
+          
+        
+          <dt><a name="P_MUTACE">P_MUTACE</a></dt>
+          
+          <dd class="description"><p>Pravdepodobnost, je dojde k mutaci genomu jedince.</p></dd>
+          
+        
+          <dt><a name="SELEKCNI_TLAK">SELEKCNI_TLAK</a></dt>
+          
+          <dd class="description"><p>Nastavuje selekcni tlat na vyber jedincu do populace pristi generace.</p></dd>
+          
+        
+          <dt><a name="TYP_KRIZENI">TYP_KRIZENI</a></dt>
+          
+          <dd class="description"><p>Typ krizeni: 1=jednobodove/ 2=dvoubodove/ 3=uniformni.</p></dd>
+          
+        
+          <dt><a name="VELIKOST_POPULACE">VELIKOST_POPULACE</a></dt>
+          
+          <dd class="description"><p>Udava velikost populace jedincu v kazde generaci.</p></dd>
+          
+        
+        </dl>
+      </div>
+      
+
+      
+
+      <!-- Methods -->
+      
+      <div id="public-class-method-details" class="method-section section">
+        <h3 class="section-header">Public Class Methods</h3>
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k prednastaveni instancnich promennych.</p>
+            
+
+            
+            <div class="method-source-code" id="new-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 47</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-ivar">@populace</span> = <span class="ruby-keyword">nil</span>               <span class="ruby-comment"># vygenerované vektory ohodnocení</span>
+  <span class="ruby-ivar">@instance</span> = <span class="ruby-keyword">nil</span>               <span class="ruby-comment"># instance problemu WSAT</span>
+  <span class="ruby-ivar">@poc_klauzuli</span> = <span class="ruby-value">0</span>             <span class="ruby-comment"># pocet klauzuli problemu</span>
+  <span class="ruby-ivar">@poc_promennych_instance</span> = <span class="ruby-value">0</span>  <span class="ruby-comment"># pocet promennych formule</span>
+  <span class="ruby-ivar">@soucet_vsech_vah</span> = <span class="ruby-value">0</span>         <span class="ruby-comment"># maximalni soucet vahovych ohodnoceni</span>
+  <span class="ruby-ivar">@nej_soucet_vah</span> = <span class="ruby-value">0</span>           <span class="ruby-comment"># vysledny soucet vah nejlepsiho ziskaneho reseni</span>
+  <span class="ruby-ivar">@nejlepsi_reseni</span> = <span class="ruby-keyword">nil</span>        <span class="ruby-comment"># nejlepsi ziskane reseni pomoci gen. algoritmu</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- new-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- new-method -->
+
+      
+      </div><!-- public-class-method-details -->
+    
+      <div id="public-instance-method-details" class="method-section section">
+        <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="dej_pocet_splnenych_klauzuli-method" class="method-detail ">
+          <a name="method-i-dej_pocet_splnenych_klauzuli"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dej_pocet_splnenych_klauzuli</span><span
+              class="method-args">(jedinec, klauzule)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda vraci pocet splnenych klauzuli aktualnim nastavenim jedince.</p>
+            
+
+            
+            <div class="method-source-code" id="dej_pocet_splnenych_klauzuli-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 229</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dej_pocet_splnenych_klauzuli</span>(<span class="ruby-identifier">jedinec</span>, <span class="ruby-identifier">klauzule</span>)
+  <span class="ruby-identifier">prom</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">poc_splnenych_k</span> = <span class="ruby-value">0</span>
+  
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@poc_klauzuli</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">je_splnena</span> = <span class="ruby-keyword">false</span>
+    <span class="ruby-identifier">citac2</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac2</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">citac</span>].<span class="ruby-identifier">length</span>)<span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">prom</span> = <span class="ruby-identifier">klauzule</span>[<span class="ruby-identifier">citac</span>][<span class="ruby-identifier">citac2</span>]
+      <span class="ruby-keyword">if</span>(((<span class="ruby-identifier">prom</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">jedinec</span>[<span class="ruby-identifier">prom</span>.<span class="ruby-identifier">abs</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>]) <span class="ruby-operator">||</span> ((<span class="ruby-identifier">prom</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">jedinec</span>[<span class="ruby-identifier">prom</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>])) <span class="ruby-keyword">then</span>
+        <span class="ruby-identifier">je_splnena</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">citac2</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">je_splnena</span>) <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">poc_splnenych_k</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">citac</span> <span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">poc_splnenych_k</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dej_pocet_splnenych_klauzuli-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dej_pocet_splnenych_klauzuli-method -->
+
+      
+        <div id="dej_sampiona-method" class="method-detail ">
+          <a name="method-i-dej_sampiona"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dej_sampiona</span><span
+              class="method-args">(populace)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k porovnavani dvou jedincu. Vraci toho zdatnejsiho.</p>
+            
+
+            
+            <div class="method-source-code" id="dej_sampiona-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dej_sampiona</span>(<span class="ruby-identifier">populace</span>)
+  <span class="ruby-identifier">nejlepsi</span> = <span class="ruby-identifier">populace</span>[<span class="ruby-value">0</span>]
+  <span class="ruby-identifier">fitness_sampiona</span> = <span class="ruby-identifier">vypocti_fitness</span>(<span class="ruby-identifier">nejlepsi</span>)
+  <span class="ruby-identifier">fitness_protivnika</span> = <span class="ruby-value">0</span>
+  
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">1</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">VELIKOST_POPULACE</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">fitness_protivnika</span> = <span class="ruby-identifier">vypocti_fitness</span>(<span class="ruby-identifier">populace</span>[<span class="ruby-identifier">citac</span>])
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">fitness_sampiona</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">fitness_protivnika</span>)<span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">nejlepsi</span> = <span class="ruby-identifier">populace</span>[<span class="ruby-identifier">citac</span>]
+      <span class="ruby-identifier">fitness_sampiona</span> = <span class="ruby-identifier">fitness_protivnika</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">nejlepsi</span>
+  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dej_sampiona-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dej_sampiona-method -->
+
+      
+        <div id="dej_vyherce-method" class="method-detail ">
+          <a name="method-i-dej_vyherce"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">dej_vyherce</span><span
+              class="method-args">(jedinec_a, jedinec_b)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k urceni vyherce ze dvou zapasicich jedincu.</p>
+            
+
+            
+            <div class="method-source-code" id="dej_vyherce-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 292</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">dej_vyherce</span>(<span class="ruby-identifier">jedinec_a</span>, <span class="ruby-identifier">jedinec_b</span>)
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">vypocti_fitness</span>(<span class="ruby-identifier">jedinec_a</span>) <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">vypocti_fitness</span>(<span class="ruby-identifier">jedinec_b</span>)) <span class="ruby-keyword">then</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">jedinec_a</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">jedinec_b</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- dej_vyherce-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- dej_vyherce-method -->
+
+      
+        <div id="generuj_populaci-method" class="method-detail ">
+          <a name="method-i-generuj_populaci"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">generuj_populaci</span><span
+              class="method-args">(velikost)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k vygenerovani nahodnych vektiru jedincu pocatecni
+populace.</p>
+            
+
+            
+            <div class="method-source-code" id="generuj_populaci-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 162</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">generuj_populaci</span>(<span class="ruby-identifier">velikost</span>)
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">velikost</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">citac2</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac2</span><span class="ruby-operator">&lt;</span><span class="ruby-ivar">@poc_promennych_instance</span>)<span class="ruby-keyword">do</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-constant">Random</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-value">2</span>)<span class="ruby-operator">==</span> <span class="ruby-value">1</span>)<span class="ruby-keyword">then</span> <span class="ruby-comment"># vrací 0/1</span>
+        <span class="ruby-ivar">@populace</span>[<span class="ruby-identifier">citac</span>][<span class="ruby-identifier">citac2</span>] = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-ivar">@populace</span>[<span class="ruby-identifier">citac</span>][<span class="ruby-identifier">citac2</span>] = <span class="ruby-keyword">false</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">citac2</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- generuj_populaci-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- generuj_populaci-method -->
+
+      
+        <div id="mutace-method" class="method-detail ">
+          <a name="method-i-mutace"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">mutace</span><span
+              class="method-args">(jedinec)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi aplikaci procesu mutace genomu jedince.</p>
+            
+
+            
+            <div class="method-source-code" id="mutace-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">mutace</span>(<span class="ruby-identifier">jedinec</span>) <span class="ruby-comment"># na kazdy bit jedince se pusti s MALOU pravdepodobnosti proces mutace</span>
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@poc_promennych_instance</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">if</span> ((<span class="ruby-constant">Random</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-value">1001</span>)<span class="ruby-operator">/</span><span class="ruby-value">1000.0</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-constant">P_MUTACE</span>) <span class="ruby-keyword">then</span> <span class="ruby-comment"># nahoda od 0.000 do 1.000</span>
+      <span class="ruby-identifier">jedinec</span>[<span class="ruby-identifier">citac</span>] = <span class="ruby-operator">!</span><span class="ruby-identifier">jedinec</span>[<span class="ruby-identifier">citac</span>] <span class="ruby-comment"># zneguju bit, ktery zasahla mutace</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">jedinec</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- mutace-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- mutace-method -->
+
+      
+        <div id="nacti_parametry-method" class="method-detail ">
+          <a name="method-i-nacti_parametry"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">nacti_parametry</span><span
+              class="method-args">(instance)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k nacteni instancnich promennych.</p>
+            
+
+            
+            <div class="method-source-code" id="nacti_parametry-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">nacti_parametry</span>(<span class="ruby-identifier">instance</span>)
+  <span class="ruby-ivar">@instance</span> = <span class="ruby-identifier">instance</span>
+  <span class="ruby-ivar">@poc_klauzuli</span> = <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">pocet_klauzuli</span>
+  <span class="ruby-ivar">@poc_promennych_instance</span> = <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">pocet_promennych</span>
+  <span class="ruby-ivar">@soucet_vsech_vah</span> = <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">vrat_celkovy_soucet_vah</span>
+  <span class="ruby-ivar">@populace</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">VELIKOST_POPULACE</span>)
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">VELIKOST_POPULACE</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-ivar">@populace</span>[<span class="ruby-identifier">citac</span>] = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@poc_promennych_instance</span>)
+    <span class="ruby-identifier">citac</span> <span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- nacti_parametry-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- nacti_parametry-method -->
+
+      
+        <div id="start-method" class="method-detail ">
+          <a name="method-i-start"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">start</span><span
+              class="method-args">(instance)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi ke spusteni genetickeho algoritmu. Vystupem je instance
+WSAT problemu se zapsanymi hodntami ziskanimi prubehem algoritmu.</p>
+            
+
+            
+            <div class="method-source-code" id="start-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 76</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">start</span>(<span class="ruby-identifier">instance</span>)
+  
+  <span class="ruby-comment"># 1)Vygeneruj nahodnou pocatecni populaci P(0)</span>
+  <span class="ruby-identifier">nacti_parametry</span>(<span class="ruby-identifier">instance</span>)
+  <span class="ruby-identifier">generuj_populaci</span>(<span class="ruby-constant">VELIKOST_POPULACE</span>)
+  
+  <span class="ruby-comment"># Vyhodnot kvalitu kazdeho jedince v populaci P pomoci ohodnocovaci funkce.</span>
+  <span class="ruby-comment">#    - zjisti nejlepsiho jedince  </span>
+  <span class="ruby-identifier">sampion</span> = <span class="ruby-identifier">dej_sampiona</span>(<span class="ruby-ivar">@populace</span>)
+  
+  <span class="ruby-comment"># 2)N-krat opakuj:</span>
+  <span class="ruby-identifier">citac</span>= <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">POCET_GENERACI</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># 3) Vytvoř novou práznou populaci P(N)</span>
+    <span class="ruby-identifier">nova_populace</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-constant">VELIKOST_POPULACE</span>)
+    <span class="ruby-identifier">nova_populace</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">prvek</span><span class="ruby-operator">|</span> 
+      <span class="ruby-identifier">prvek</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@poc_promennych_instance</span>)
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-comment"># 4)Pouzij selekci na omezeny pocet rodicu z populace P(N-1) a na vitezne:</span>
+    <span class="ruby-identifier">pocet_novych</span> = <span class="ruby-value">0</span>
+    <span class="ruby-identifier">citac2</span> = <span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">pocet_novych</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">VELIKOST_POPULACE</span>)<span class="ruby-keyword">do</span> <span class="ruby-comment"># dokud nenaplnim celou populaci</span>
+      
+      <span class="ruby-identifier">potomek_a</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-identifier">potomek_b</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-comment"># 5)pouzij se zvolenou pravdepodobnosti krizeni</span>
+      <span class="ruby-keyword">if</span> ((<span class="ruby-constant">Random</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-value">1001</span>)<span class="ruby-operator">/</span><span class="ruby-value">1000.0</span>) <span class="ruby-operator">&lt;</span> <span class="ruby-constant">P_KRIZENI</span>) <span class="ruby-keyword">then</span> <span class="ruby-comment"># (0&lt;X&lt;1)</span>
+        <span class="ruby-comment"># provest krizeni</span>
+        <span class="ruby-identifier">potomek_a</span> = (<span class="ruby-identifier">turnajovy_vyber</span>(<span class="ruby-constant">SELEKCNI_TLAK</span>).<span class="ruby-identifier">dup</span>)
+        <span class="ruby-identifier">potomek_b</span> = (<span class="ruby-identifier">turnajovy_vyber</span>(<span class="ruby-constant">SELEKCNI_TLAK</span>).<span class="ruby-identifier">dup</span>)
+        <span class="ruby-keyword">case</span> <span class="ruby-constant">TYP_KRIZENI</span>  
+        <span class="ruby-keyword">when</span> <span class="ruby-value">1</span>
+          <span class="ruby-identifier">krizeni</span> = <span class="ruby-constant">KrizeniJednobodove</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">potomek_a</span>,<span class="ruby-identifier">potomek_b</span>)
+        <span class="ruby-keyword">when</span> <span class="ruby-value">2</span>
+          <span class="ruby-identifier">krizeni</span> = <span class="ruby-constant">KrizeniDvoubodove</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">potomek_a</span>,<span class="ruby-identifier">potomek_b</span>) 
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-identifier">krizeni</span> = <span class="ruby-constant">KrizeniUniformni</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">potomek_a</span>,<span class="ruby-identifier">potomek_b</span>)  
+        <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">krizeni</span>.<span class="ruby-identifier">proved_krizeni</span>
+        <span class="ruby-identifier">potomek_a</span> = <span class="ruby-identifier">krizeni</span>.<span class="ruby-identifier">vektor_a</span>.<span class="ruby-identifier">dup</span>
+        <span class="ruby-identifier">potomek_b</span> = <span class="ruby-identifier">krizeni</span>.<span class="ruby-identifier">vektor_b</span>.<span class="ruby-identifier">dup</span>
+      <span class="ruby-keyword">else</span>
+        <span class="ruby-comment"># provest vyber</span>
+        <span class="ruby-identifier">potomek_a</span> = (<span class="ruby-identifier">turnajovy_vyber</span>(<span class="ruby-constant">SELEKCNI_TLAK</span>).<span class="ruby-identifier">dup</span>)         
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-comment"># 6)pouzij na kazdy bit jedince s urcitou pravdepodobnosti mutaci  </span>
+      <span class="ruby-identifier">potomek_a</span> = <span class="ruby-identifier">mutace</span>(<span class="ruby-identifier">potomek_a</span>)
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">potomek_b</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-keyword">then</span> <span class="ruby-comment"># pokud se provedlo krizeni a ma se provest mutace</span>
+        <span class="ruby-identifier">potomek_b</span> = <span class="ruby-identifier">mutace</span>(<span class="ruby-identifier">potomek_b</span>)
+      <span class="ruby-keyword">end</span>
+      
+      <span class="ruby-comment"># 7)Pridej potomky do nove populace</span>
+      <span class="ruby-identifier">nova_populace</span>[<span class="ruby-identifier">pocet_novych</span>] = <span class="ruby-identifier">potomek_a</span>
+      <span class="ruby-identifier">pocet_novych</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+      <span class="ruby-keyword">if</span> ((<span class="ruby-identifier">potomek_b</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword">nil</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">pocet_novych</span> <span class="ruby-operator">!=</span> <span class="ruby-constant">VELIKOST_POPULACE</span>)) <span class="ruby-keyword">then</span>
+        <span class="ruby-identifier">nova_populace</span>[<span class="ruby-identifier">pocet_novych</span>] = <span class="ruby-identifier">potomek_b</span>
+        <span class="ruby-identifier">pocet_novych</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+          
+      <span class="ruby-identifier">citac2</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-comment"># 8)Nahrad starou populaci novou populaci P(N-1)=P(N)</span>
+   
+    <span class="ruby-ivar">@populace</span> = <span class="ruby-identifier">nova_populace</span>.<span class="ruby-identifier">dup</span> <span class="ruby-comment"># stara populace nahrazena novou</span>
+    <span class="ruby-comment">#puts &quot; #{vypis_populaci(@populace)}&quot;</span>
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># 9)Potomek z populace P(N) s nejlepsi kondici (fitness) je resenim</span>
+  <span class="ruby-identifier">sampion</span> = <span class="ruby-identifier">dej_sampiona</span>(<span class="ruby-ivar">@populace</span>)
+
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">dej_pocet_splnenych_klauzuli</span>(<span class="ruby-identifier">sampion</span>, <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">klauzule</span>) <span class="ruby-operator">==</span> <span class="ruby-ivar">@poc_klauzuli</span>)<span class="ruby-keyword">then</span> <span class="ruby-comment"># pokud je F splnena</span>
+    <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">zapis_vysledek</span>(<span class="ruby-identifier">sampion</span>, <span class="ruby-keyword">true</span>)  <span class="ruby-comment"># zapisi vysledky do instance</span>
+  <span class="ruby-keyword">else</span> 
+    <span class="ruby-identifier">instance</span>.<span class="ruby-identifier">zapis_vysledek</span>(<span class="ruby-identifier">sampion</span>, <span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">instance</span>
+  
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- start-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- start-method -->
+
+      
+        <div id="turnajovy_vyber-method" class="method-detail ">
+          <a name="method-i-turnajovy_vyber"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">turnajovy_vyber</span><span
+              class="method-args">(selekcni_tlak)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k vyberu nejzdatnejsiho jedince formou turnaje.</p>
+            
+
+            
+            <div class="method-source-code" id="turnajovy_vyber-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 256</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">turnajovy_vyber</span>(<span class="ruby-identifier">selekcni_tlak</span>)
+  <span class="ruby-identifier">poc_zapasicich</span> = (<span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-identifier">selekcni_tlak</span>) * <span class="ruby-constant">VELIKOST_POPULACE</span>
+  <span class="ruby-identifier">prihlaseni</span> = []
+  
+  <span class="ruby-identifier">citac</span> =<span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-constant">VELIKOST_POPULACE</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">prihlaseni</span>[<span class="ruby-identifier">prihlaseni</span>.<span class="ruby-identifier">length</span>]=<span class="ruby-ivar">@populace</span>[<span class="ruby-identifier">citac</span>].<span class="ruby-identifier">dup</span>
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">poc_zapasicich</span>)<span class="ruby-keyword">do</span>
+
+    <span class="ruby-identifier">nahoda</span> = <span class="ruby-constant">Random</span>.<span class="ruby-identifier">rand</span>(<span class="ruby-constant">VELIKOST_POPULACE</span><span class="ruby-operator">-</span><span class="ruby-identifier">citac</span>)
+    <span class="ruby-identifier">prihlaseni</span>[<span class="ruby-identifier">nahoda</span>] = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">prihlaseni</span>.<span class="ruby-identifier">compact!</span>
+    
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>    
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-comment">#vyberu sampiona s nejlepsim fitness</span>
+  <span class="ruby-identifier">vel</span> = <span class="ruby-identifier">prihlaseni</span>.<span class="ruby-identifier">length</span>
+  <span class="ruby-identifier">sampion</span> = <span class="ruby-identifier">prihlaseni</span>[<span class="ruby-value">0</span>]
+  
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">vel</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">sampion</span> = <span class="ruby-identifier">dej_vyherce</span>(<span class="ruby-identifier">sampion</span>, <span class="ruby-identifier">prihlaseni</span>[<span class="ruby-identifier">citac</span>])
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">sampion</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- turnajovy_vyber-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- turnajovy_vyber-method -->
+
+      
+        <div id="vypis_jedince-method" class="method-detail ">
+          <a name="method-i-vypis_jedince"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vypis_jedince</span><span
+              class="method-args">(jedinec)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda je pouze kontrolni a slouzi k vypisu jedince na standardni
+vystup.</p>
+            
+
+            
+            <div class="method-source-code" id="vypis_jedince-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 317</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vypis_jedince</span>(<span class="ruby-identifier">jedinec</span>)
+  <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;(&quot;</span>
+  <span class="ruby-identifier">citac</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@poc_promennych_instance</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">if</span>(<span class="ruby-identifier">jedinec</span>[<span class="ruby-identifier">citac</span>]) <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;1&quot;</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;0&quot;</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">citac</span> <span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;)&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vypis_jedince-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vypis_jedince-method -->
+
+      
+        <div id="vypis_populaci-method" class="method-detail ">
+          <a name="method-i-vypis_populaci"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vypis_populaci</span><span
+              class="method-args">(populace)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda je pouze kontrolni a slouzi k vypisu populace na standardni
+vystup.</p>
+            
+
+            
+            <div class="method-source-code" id="vypis_populaci-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 334</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vypis_populaci</span>(<span class="ruby-identifier">populace</span>)
+  <span class="ruby-identifier">citac</span>=<span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">populace</span>.<span class="ruby-identifier">length</span>)<span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">print</span> <span class="ruby-string">&quot;(&quot;</span>
+    <span class="ruby-identifier">citac2</span>=<span class="ruby-value">0</span>
+    <span class="ruby-keyword">while</span>(<span class="ruby-identifier">citac2</span><span class="ruby-operator">&lt;</span><span class="ruby-ivar">@poc_promennych_instance</span>)<span class="ruby-keyword">do</span>
+      <span class="ruby-keyword">if</span> (<span class="ruby-identifier">populace</span>[<span class="ruby-identifier">citac</span>][<span class="ruby-identifier">citac2</span>])<span class="ruby-keyword">then</span>
+        <span class="ruby-identifier">print</span><span class="ruby-string">&quot;1&quot;</span>
+      <span class="ruby-keyword">else</span> 
+        <span class="ruby-identifier">print</span><span class="ruby-string">&quot;0&quot;</span>
+      <span class="ruby-keyword">end</span>
+      <span class="ruby-identifier">citac2</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;)&quot;</span>
+    <span class="ruby-identifier">citac</span><span class="ruby-operator">+=</span><span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">puts</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vypis_populaci-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vypis_populaci-method -->
+
+      
+        <div id="vypocti_fitness-method" class="method-detail ">
+          <a name="method-i-vypocti_fitness"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">vypocti_fitness</span><span
+              class="method-args">(jedinec)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Tato metoda slouzi k vypocteni zdatnosti jedince. Zdatnost je urcena na
+zaklade vlastnosti urcujici budouci prospesnost jedince.</p>
+            
+
+            
+            <div class="method-source-code" id="vypocti_fitness-source">
+<pre>
+<span class="ruby-comment"># File wsat_genetikou.rb, line 202</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">vypocti_fitness</span>(<span class="ruby-identifier">jedinec</span>)
+  <span class="ruby-identifier">poc_splnenych_k</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">soucet_vah</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">fitness</span> = <span class="ruby-value">0.0</span>
+  
+  <span class="ruby-comment"># pocet splnenych klauzuli</span>
+  <span class="ruby-identifier">poc_splnenych_k</span> = <span class="ruby-identifier">dej_pocet_splnenych_klauzuli</span>(<span class="ruby-identifier">jedinec</span>, <span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">klauzule</span>)
+  
+  <span class="ruby-comment"># splnena cela formule (TREST SMRTI)</span>
+  <span class="ruby-keyword">if</span> (<span class="ruby-identifier">poc_splnenych_k</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@poc_klauzuli</span>) <span class="ruby-keyword">then</span>
+    <span class="ruby-comment"># zvyhodneni za splnenou formuli  </span>
+    <span class="ruby-identifier">fitness</span> = <span class="ruby-constant">PROSTOR_K_POMERENI_ZDATNOSTI_NERESENI</span> <span class="ruby-comment"># pokud je splnena, tak zdatnost je vzdy &gt;= zdatnosti nejlepsimu moznemu &quot;nereseni&quot;</span>
+    <span class="ruby-comment"># bonus za pouzite vahy</span>
+    <span class="ruby-identifier">soucet_vah</span> = <span class="ruby-ivar">@instance</span>.<span class="ruby-identifier">vrat_soucet_vah</span>(<span class="ruby-identifier">jedinec</span>)
+    <span class="ruby-identifier">fitness</span> <span class="ruby-operator">+=</span> (((<span class="ruby-value">1</span><span class="ruby-operator">-</span><span class="ruby-constant">PROSTOR_K_POMERENI_ZDATNOSTI_NERESENI</span>) <span class="ruby-operator">/</span> <span class="ruby-ivar">@soucet_vsech_vah</span>) * <span class="ruby-identifier">soucet_vah</span>)    
+  <span class="ruby-keyword">else</span>  
+    <span class="ruby-keyword">if</span> (<span class="ruby-operator">!</span><span class="ruby-constant">POUZIT_TREST_SMRTI</span>) <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">fitness</span> = (<span class="ruby-constant">PROSTOR_K_POMERENI_ZDATNOSTI_NERESENI</span> <span class="ruby-operator">/</span> <span class="ruby-ivar">@poc_klauzuli</span>) * <span class="ruby-identifier">poc_splnenych_k</span>
+    <span class="ruby-keyword">end</span>   
+  <span class="ruby-keyword">end</span>
+  
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">fitness</span>    
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- vypocti_fitness-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- vypocti_fitness-method -->
+
+      
+      </div><!-- public-instance-method-details -->
+    
+    </div><!-- 5Buntitled-5D -->
+  
+
+  </div><!-- documentation -->
+
+  <div id="validator-badges">
+    <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+    <p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+      Rdoc Generator</a> 2</small>.</p>
+  </div>
+
+</body>
+</html>
+
